@@ -1,0 +1,22 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlankarKumar/notes.git"
+  },
+  "author": "Alankar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlankarKumar/notes/issues"
+  },
+  "homepage": "https://github.com/AlankarKumar/notes#readme",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
