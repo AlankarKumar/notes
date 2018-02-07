@@ -13,13 +13,25 @@ let command = process.argv[2];
 // console.log('Yargs',yargs.argv);
 
 if (command === 'add'){
-    notes.addNote(argv.title,argv.body);
+    var result = notes.addNote(argv.title,argv.body);
+    console.log(result);
 }else if(command === 'list'){
-    notes.getAll();
+    var notesAll = notes.getAll();
+    console.log("Printing :" ,notesAll.length);
+    notesAll.forEach(element => {
+        console.log(element);
+    });
 }else if(command === 'read'){
-    notes.getNote(argv.title);
+    var note =  notes.getNote(argv.title);
+    if(note){
+        console.log(note);
+    }else{
+        console.log('No note found');
+    }
 }else if(command === 'remove'){
-    notes.removeNote(argv.title);
+    var noteRemoved = notes.removeNote(argv.title);
+    var message = noteRemoved ? 'Note was removed' : 'No note was removed';
+    console.log(message);
 }else{
     console.log('Command not logged');
 }
